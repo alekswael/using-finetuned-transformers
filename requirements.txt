@@ -1,0 +1,4 @@
+pandas==1.5.2
+seaborn==0.12.2
+transformers==4.24.0
+torch==2.0.0
