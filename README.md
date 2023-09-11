@@ -1,33 +1,15 @@
 <br />
-  <h1 align="center">Assignment 4: Using finetuned transformers via HuggingFace</h1> 
-  <h2 align="center">Cultural Data Science, 2023</h2> 
+  <h1 align="center">Using finetuned transformers through HuggingFace</h1> 
   <h3 align="center">
   Author: Aleksander Moeslund Wael <br>
-  Student no. 202005192
   </h3>
 </p>
-
-## Assignment notes (Ross)
-In previous assignments, you've done a lot of model training of various kinds of complexity, such as training document classifiers or RNN language models. This assignment is more like Assignment 1, in that it's about *feature extraction*.
-
-For this assignment, you should use ```HuggingFace``` to extract information from the *Fake or Real News* dataset that we've worked with previously.
-
-You should write code and documentation which addresses the following tasks:
-
-- Initalize a ```HuggingFace``` pipeline for emotion classification
-- Perform emotion classification for every *headline* in the data
-- Assuming the most likely prediction is the correct label, create tables and visualisations which show the following:
-  - Distribution of emotions across all of the data
-  - Distribution of emotions across *only* the real news
-  - Distribution of emotions across *only* the fake news
-- Comparing the results, discuss if there are any key differences between the two sets of headlines
----
 
 ## About the project
 This repo contains a Python script, `emotion_classification.py`, which performs emotion classification on a text dataset using a finetuned transformer model in the `HuggingFace` pipeline.
 
 ### Data
-The text data used for this project is the same as for assignment 2, the Fake News Dataset. It consists of 10556 news articles, each containing a title, article text and label. All articles are either real or fake news. For the emotion classification task, only the headlines were used.
+The Fake News Dataset consists of 10556 news articles, each containing a title, article text and label. All articles are either real or fake news. For the emotion classification task, only the headlines were used.
 
 ### Model
 The model used for the emotion classification task is the `j-hartmann/emotion-english-distilroberta-base` transformer model from the HuggingFace platform (Jochen Hartmann, "Emotion English DistilRoBERTa-base". [HuggingFace link](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/), 2022). The model is a finetuned version of the `distilroberta-base` model. It predicts Ekman's 6 basic emotions plus a neutral class: `anger`, `disgust`, `fear`, `joy`, `neutral`, `sadness` and `surprise`.
@@ -53,8 +35,8 @@ The repo was setup to work with Windows (the WIN_ files), MacOS and Linux (the M
 ### 1. Clone repository to desired directory
 
 ```bash
-git clone https://github.com/alekswael/assignment-4---using-finetuned-transformers
-cd assignment-4---using-finetuned-transformers
+git clone https://github.com/alekswael/using-finetuned-transformers
+cd using-finetuned-transformers
 ```
 ### 2. Run setup script 
 **NOTE:** Depending on your OS, run either `WIN_setup.sh` or `MACL_setup.sh`.
